@@ -25,8 +25,10 @@ function curveScore(original, curveAmount) {
   return original + curveAmount;
 }
 
+// Generate a random array
 const testScores = Array.from({ length: 20 }, () => getRandomIntInclusive(60, 100));
 
+// Update testScores with curved scores
 testScores.forEach((el, i, curvedScores) => {
   curvedScores[i] = curveScore(el, 10);
 });
