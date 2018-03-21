@@ -1,0 +1,28 @@
+/*
+# Exam Re-work
+1. Generate an array of 20 random integers between 60-100 to simulate an array of 20 test scores. We can call this ```testScores```. Use provided fxn. getRandomIntInclusive();
+2. Use provided fxn. curveScore(). Curve each score by 10 points.
+3. Generating a listing of the scores in the browser.
+*/
+
+/**
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+ * @param {Number} min
+ * @param {Number} max
+ * @return {Number}
+ */
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min; // The maximum is inclusive and the minimum is inclusive
+}
+
+/**
+ * Add a specified amount to curve a score
+ * @param {Number} original
+ * @param {Number} curveAmount - amount to add for curve
+ * @return {Number}
+ */
+function curveScore(original, curveAmount) {
+  return original + curveAmount;
+}
