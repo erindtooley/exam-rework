@@ -1,6 +1,5 @@
 /*
 # Exam Re-work
-1. Generate an array of 20 random integers between 60-100 to simulate an array of 20 test scores. We can call this ```testScores```. Use provided fxn. getRandomIntInclusive();
 2. Use provided fxn. curveScore(). Curve each score by 10 points.
 3. Generating a listing of the scores in the browser.
 */
@@ -26,3 +25,5 @@ function getRandomIntInclusive(min, max) {
 function curveScore(original, curveAmount) {
   return original + curveAmount;
 }
+
+const testScores = Array.from({ length: 20 }, () => getRandomIntInclusive(60, 100));
