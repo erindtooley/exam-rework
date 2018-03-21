@@ -1,7 +1,7 @@
 {
-  "name": "cis177-starter",
+  "name": "exam-rework",
   "version": "1.0.0",
-  "description": "Boilerplate for working on class projects in JS.",
+  "description": "Advanced reworking of code exercise from midterm",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
