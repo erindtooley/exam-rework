@@ -1,6 +1,5 @@
 /*
 # Exam Re-work
-2. Use provided fxn. curveScore(). Curve each score by 10 points.
 3. Generating a listing of the scores in the browser.
 */
 
@@ -27,3 +26,7 @@ function curveScore(original, curveAmount) {
 }
 
 const testScores = Array.from({ length: 20 }, () => getRandomIntInclusive(60, 100));
+
+testScores.forEach((el, i, curvedScores) => {
+  curvedScores[i] = curveScore(el, 10);
+});
