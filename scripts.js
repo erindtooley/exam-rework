@@ -12,7 +12,7 @@
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min; // The maximum is inclusive and the minimum is inclusive
+  return Math.floor(Math.random() * (max - min + 1)) + min; // The maximum and minimum are inclusive
 }
 
 /**
@@ -26,9 +26,26 @@ function curveScore(original, curveAmount) {
 }
 
 // Generate a random array
-const testScores = Array.from({ length: 20 }, () => getRandomIntInclusive(60, 100));
+const testScores = Array.from({ length: 20 }, () =>
+  getRandomIntInclusive(60, 100)
+);
 
-// Update testScores with curved scores
-testScores.forEach((el, i, curvedScores) => {
-  curvedScores[i] = curveScore(el, 10);
-});
+console.log(`Original Scores: ${testScores}`);
+
+/*
+ * There is another video showing how to achieve this result using forEach().
+ * While that is an adequate solution, this one is just so much sweeter, I have elected
+ * to only leave this one in.
+*/
+const curvedScores = testScores.map(el => curveScore(el, 10));
+
+/*
+ * Just for illustration purposes, the ES5 equivalent of our map fxn. is also shown.
+ * Notice the dramatic, shorter, less complex syntax when we use ES2015! :)
+ * 
+ * const curvedScores = testScores.map(function(el) {
+ *  return curveScore(el, 10);
+ * });
+*/
+
+console.log(`Curved Scores: ${curvedScores}`);
