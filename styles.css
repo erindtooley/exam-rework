@@ -1,0 +1,11 @@
+body {
+  background-image: url(img/island.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 7.5em;
+  text-align: center;
+}
