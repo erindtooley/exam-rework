@@ -1,7 +1,8 @@
 body {
   background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-    url(img/island.jpg) no-repeat;
+    url(img/island.jpg) center center no-repeat;
   background-size: cover;
+  height: 100vh;
   margin-top: 2rem;
 }
 
