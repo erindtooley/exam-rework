@@ -1,8 +1,3 @@
-/*
-# Exam Re-work
-3. Generating a listing of the scores in the browser.
-*/
-
 /**
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
  * @param {Number} min
@@ -24,14 +19,9 @@ function getRandomIntInclusive(min, max) {
 function curveScore(original, curveAmount) {
   return original + curveAmount;
 }
-
 // Generate a random array
-const testScores = Array.from({ length: 20 }, () =>
-  getRandomIntInclusive(60, 100)
-);
-
-console.log(`Original Scores: ${testScores}`);
-
+const testScores = Array.from({ length: 20 }, () => getRandomIntInclusive(60, 100));
+// console.log(`Original Scores: ${testScores}`);
 /*
  * There is another video showing how to achieve this result using forEach().
  * While that is an adequate solution, this one is just so much sweeter, I have elected
@@ -48,4 +38,11 @@ const curvedScores = testScores.map(el => curveScore(el, 10));
  * });
 */
 
-console.log(`Curved Scores: ${curvedScores}`);
+// console.log(`Curved Scores: ${curvedScores}`);
+
+// Generate a listing of the scores in the browser.
+// Instantiate the table with the existing HTML <body> and the row with the <template>.
+const template = document.querySelector('#score-row');
+// We must use querySelectorAll (not querySelector()) to grab all of the <td>s into an array.
+const data = template.content.querySelectorAll('td');
+console.log(data);

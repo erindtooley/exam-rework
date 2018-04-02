@@ -14,7 +14,7 @@
   "author": "Manav Misra",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^4.17.0",
+    "eslint": "^4.19.1",
     "eslint-config-google": "^0.9.1",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.0",
