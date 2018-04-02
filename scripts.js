@@ -19,30 +19,16 @@ function getRandomIntInclusive(min, max) {
 function curveScore(original, curveAmount) {
   return original + curveAmount;
 }
-// Generate a random array
+// This will generate a random array of 20 numbers from 60-100.
 const testScores = Array.from({ length: 20 }, () => getRandomIntInclusive(60, 100));
-// console.log(`Original Scores: ${testScores}`);
-/*
- * There is another video showing how to achieve this result using forEach().
- * While that is an adequate solution, this one is just so much sweeter, I have elected
- * to only leave this one in.
-*/
+
 const curvedScores = testScores.map(el => curveScore(el, 10));
-
-/*
- * Just for illustration purposes, the ES5 equivalent of our map fxn. is also shown.
- * Notice the dramatic, shorter, less complex syntax when we use ES2015! :)
- * 
- * const curvedScores = testScores.map(function(el) {
- *  return curveScore(el, 10);
- * });
-*/
-
-// console.log(`Curved Scores: ${curvedScores}`);
 
 // Generate a listing of the scores in the browser.
 // Instantiate the table with the existing HTML <body> and the row with the <template>.
 const template = document.querySelector('#score-row');
+
 // We must use querySelectorAll (not querySelector()) to grab all of the <td>s into an array.
+// It will only grab the first td it comes across if you don't add All.
 const data = template.content.querySelectorAll('td');
 console.log(data);
